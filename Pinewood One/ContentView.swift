@@ -1,77 +1,78 @@
 import SwiftUI
-import WebKit
-
-// 1. Modern State Management (Observation Framework)
-@Observable
-class ContentViewModel {
-    var showBrowser = false
-    var url = URL(string: "https://www.apple.com")!
-}
+import SafariServices
 
 struct ContentView: View {
-    @State private var viewModel = ContentViewModel()
-    
+    @Environment(\.scenePhase) private var scenePhase
+    @StateObject private var appState = AppState()
+
     var body: some View {
-        NavigationStack {
-            ZStack {
-                // Background gradient to show off glass effects
-                LinearGradient(colors: [.indigo, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
-                
-                VStack(spacing: 20) {
-                    Image(systemName: "swift")
-                        .font(.system(size: 80))
-                        .foregroundStyle(.white)
-                        .symbolEffect(.bounce, value: viewModel.showBrowser) // Native symbol animation
-                    
-                    Text("SwiftUI 2026")
-                        .font(.largeTitle.weight(.bold))
-                        .foregroundStyle(.white)
-                    
-                    Text("Ready for the Liquid Glass era.")
-                        .foregroundStyle(.white.opacity(0.8))
-                    
-                    // 2. The new Glass Button Style
-                    Button {
-                        viewModel.showBrowser.toggle()
-                    } label: {
-                        Label("Open Native Web", systemImage: "safari")
-                            .padding(.horizontal, 12)
-                    }
-                    .buttonStyle(.glass) // <--- The new standard style
-                    .controlSize(.large)
+        Group {
+            switch appState.phase {
+            case .loading:
+                ProgressView("Loading")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            case .signedOut:
+                AuthView(appState: appState)
+            case let .onboarding(url):
+                onboardingView(url: url)
+            case .signedIn:
+                MainTabShellView(appState: appState)
+            }
+        }
+        .onChange(of: scenePhase) { _, newPhase in
+            guard newPhase == .active else { return }
+            Task {
+                await appState.handleForegroundRefresh()
+            }
+        }
+        .sheet(item: $appState.externalBrowserDestination) { destination in
+            InAppSafariView(url: destination.url)
+                .ignoresSafeArea()
+        }
+    }
+
+    @ViewBuilder
+    private func onboardingView(url: URL) -> some View {
+        ZStack {
+            OnboardingWebContainer(
+                url: url,
+                bridgeContext: .current,
+                onStartSchoologyOAuth: {
+                    appState.handleBridgeSchoologyOAuth()
+                },
+                onOpenExternalURL: { externalURL in
+                    appState.openExternalURL(externalURL)
+                },
+                onOnboardingComplete: {
+                    appState.handleBridgeOnboardingComplete()
                 }
+            )
+            .ignoresSafeArea()
+        }
+        .alert("Something Went Wrong", isPresented: Binding(
+            get: { appState.transientError != nil },
+            set: { if !$0 { appState.transientError = nil } }
+        )) {
+            Button("OK", role: .cancel) {
+                appState.transientError = nil
             }
-            .navigationTitle("Home")
-            // 3. Native Sheet with WebView
-            .sheet(isPresented: $viewModel.showBrowser) {
-                BrowserView(url: viewModel.url)
-                    .presentationDetents([.medium, .large])
-                    .presentationBackground(.thinMaterial) // Matches glass aesthetic
-            }
+        } message: {
+            Text(appState.transientError ?? "Something went wrong.")
         }
     }
 }
 
-// 4. The long-awaited Native WebView
-struct BrowserView: View {
+private struct InAppSafariView: UIViewControllerRepresentable {
     let url: URL
-    
-    var body: some View {
-        VStack {
-            // New native toolbar spacer for separation
-            HStack {
-                Text("In-App Browser")
-                    .font(.headline)
-                Spacer()
-            }
-            
-            // No more UIViewRepresentable needed!
-            WebView(url: url)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-        }
-        .glassEffect() // Applies the new system glass treatment
+
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        let controller = SFSafariViewController(url: url)
+        controller.dismissButtonStyle = .close
+        controller.preferredControlTintColor = .label
+        return controller
     }
+
+    func updateUIViewController(_ controller: SFSafariViewController, context: Context) {}
 }
 
 #Preview {

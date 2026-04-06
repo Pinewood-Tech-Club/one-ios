@@ -7,28 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		663B39102ED43554009A9727 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663B390F2ED43553009A9727 /* WidgetKit.framework */; };
-		663B39122ED43554009A9727 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663B39112ED43554009A9727 /* SwiftUI.framework */; };
-		663B39232ED43554009A9727 /* Widget ServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 663B390D2ED43553009A9727 /* Widget ServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		66796F052F4E770700C82585 /* Pinewood.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 66796EF92F4E770600C82585 /* Pinewood.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66D1A0052FEBE0010060E81D /* ConvexMobile in Frameworks */ = {isa = PBXBuildFile; productRef = 66D1A0042FEBE0010060E81D /* ConvexMobile */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		663B39212ED43554009A9727 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66C6D9962E72883C0060E81D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 663B390C2ED43553009A9727;
-			remoteInfo = "Widget ServiceExtension";
-		};
-		66796F032F4E770700C82585 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66C6D9962E72883C0060E81D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 66796EF82F4E770600C82585;
-			remoteInfo = Pinewood;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		663B39242ED43554009A9727 /* Embed Foundation Extensions */ = {
@@ -37,7 +17,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				663B39232ED43554009A9727 /* Widget ServiceExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,7 +27,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				66796F052F4E770700C82585 /* Pinewood.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,47 +34,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		663B390D2ED43553009A9727 /* Widget ServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Widget ServiceExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		663B390F2ED43553009A9727 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		663B39112ED43554009A9727 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		66796EF92F4E770600C82585 /* Pinewood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinewood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C6D99E2E72883C0060E81D /* Pinewood One.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pinewood One.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		663B39272ED43554009A9727 /* Exceptions for "Widget Service" folder in "Widget ServiceExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 663B390C2ED43553009A9727 /* Widget ServiceExtension */;
-		};
-		66796F092F4E770700C82585 /* Exceptions for "Pinewood" folder in "Pinewood" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 66796EF82F4E770600C82585 /* Pinewood */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		663B39132ED43554009A9727 /* Widget Service */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				663B39272ED43554009A9727 /* Exceptions for "Widget Service" folder in "Widget ServiceExtension" target */,
-			);
-			path = "Widget Service";
-			sourceTree = "<group>";
-		};
-		66796EFA2F4E770600C82585 /* Pinewood */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				66796F092F4E770700C82585 /* Exceptions for "Pinewood" folder in "Pinewood" target */,
-			);
-			path = Pinewood;
-			sourceTree = "<group>";
-		};
 		66C6D9A02E72883C0060E81D /* Pinewood One */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Pinewood One";
@@ -105,26 +48,11 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		663B390A2ED43553009A9727 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				663B39122ED43554009A9727 /* SwiftUI.framework in Frameworks */,
-				663B39102ED43554009A9727 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66796EF62F4E770600C82585 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		66C6D99B2E72883C0060E81D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D1A0052FEBE0010060E81D /* ConvexMobile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				66C6D9A02E72883C0060E81D /* Pinewood One */,
-				663B39132ED43554009A9727 /* Widget Service */,
-				66796EFA2F4E770600C82585 /* Pinewood */,
 				663B390E2ED43553009A9727 /* Frameworks */,
 				66C6D99F2E72883C0060E81D /* Products */,
 			);
@@ -155,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				66C6D99E2E72883C0060E81D /* Pinewood One.app */,
-				663B390D2ED43553009A9727 /* Widget ServiceExtension.appex */,
-				66796EF92F4E770600C82585 /* Pinewood.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,50 +88,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		663B390C2ED43553009A9727 /* Widget ServiceExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 663B39282ED43554009A9727 /* Build configuration list for PBXNativeTarget "Widget ServiceExtension" */;
-			buildPhases = (
-				663B39092ED43553009A9727 /* Sources */,
-				663B390A2ED43553009A9727 /* Frameworks */,
-				663B390B2ED43553009A9727 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				663B39132ED43554009A9727 /* Widget Service */,
-			);
-			name = "Widget ServiceExtension";
-			packageProductDependencies = (
-			);
-			productName = "Widget ServiceExtension";
-			productReference = 663B390D2ED43553009A9727 /* Widget ServiceExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		66796EF82F4E770600C82585 /* Pinewood */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66796F0A2F4E770700C82585 /* Build configuration list for PBXNativeTarget "Pinewood" */;
-			buildPhases = (
-				66796EF52F4E770600C82585 /* Sources */,
-				66796EF62F4E770600C82585 /* Frameworks */,
-				66796EF72F4E770600C82585 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				66796EFA2F4E770600C82585 /* Pinewood */,
-			);
-			name = Pinewood;
-			packageProductDependencies = (
-			);
-			productName = Pinewood;
-			productReference = 66796EF92F4E770600C82585 /* Pinewood.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
-		};
 		66C6D99D2E72883C0060E81D /* Pinewood One */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66C6D9A92E72883D0060E81D /* Build configuration list for PBXNativeTarget "Pinewood One" */;
@@ -221,14 +101,13 @@
 			buildRules = (
 			);
 			dependencies = (
-				663B39222ED43554009A9727 /* PBXTargetDependency */,
-				66796F042F4E770700C82585 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				66C6D9A02E72883C0060E81D /* Pinewood One */,
 			);
 			name = "Pinewood One";
 			packageProductDependencies = (
+				66D1A0042FEBE0010060E81D /* ConvexMobile */,
 			);
 			productName = "Pinewood One";
 			productReference = 66C6D99E2E72883C0060E81D /* Pinewood One.app */;
@@ -244,12 +123,6 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					663B390C2ED43553009A9727 = {
-						CreatedOnToolsVersion = 26.1.1;
-					};
-					66796EF82F4E770600C82585 = {
-						CreatedOnToolsVersion = 26.2;
-					};
 					66C6D99D2E72883C0060E81D = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -264,33 +137,20 @@
 			);
 			mainGroup = 66C6D9952E72883C0060E81D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				66D1A0032FEBE0010060E81D /* XCRemoteSwiftPackageReference "convex-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66C6D99F2E72883C0060E81D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				66C6D99D2E72883C0060E81D /* Pinewood One */,
-				663B390C2ED43553009A9727 /* Widget ServiceExtension */,
-				66796EF82F4E770600C82585 /* Pinewood */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		663B390B2ED43553009A9727 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66796EF72F4E770600C82585 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		66C6D99C2E72883C0060E81D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,20 +161,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		663B39092ED43553009A9727 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66796EF52F4E770600C82585 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		66C6D99A2E72883C0060E81D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,154 +170,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		663B39222ED43554009A9727 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 663B390C2ED43553009A9727 /* Widget ServiceExtension */;
-			targetProxy = 663B39212ED43554009A9727 /* PBXContainerItemProxy */;
-		};
-		66796F042F4E770700C82585 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 66796EF82F4E770600C82585 /* Pinewood */;
-			targetProxy = 66796F032F4E770700C82585 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		663B39252ED43554009A9727 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58VHR9NHCR;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Widget Service/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Widget Service";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adamxu.Pinewood-One.Widget-Service";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		663B39262ED43554009A9727 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58VHR9NHCR;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Widget Service/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Widget Service";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adamxu.Pinewood-One.Widget-Service";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		66796F072F4E770700C82585 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Pinewood/Pinewood.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58VHR9NHCR;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Pinewood/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Pinewood One";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adamxu.Pinewood-One.Clip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		66796F082F4E770700C82585 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Pinewood/Pinewood.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58VHR9NHCR;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Pinewood/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Pinewood One";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.adamxu.Pinewood-One.Clip";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		66C6D9A72E72883D0060E81D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -604,6 +303,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pinewood One";
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleTypeRole = Editor;\n    CFBundleURLName = \"pinewoodone-auth\";\n    CFBundleURLSchemes =     (\n        pinewoodone\n    );\n}";
+				INFOPLIST_KEY_PINEWOOD_BACKEND_URL = "https://one-backend.axu.dev";
+				INFOPLIST_KEY_PINEWOOD_CONVEX_URL = "https://grand-cod-855.convex.cloud";
+				INFOPLIST_KEY_PINEWOOD_FRONTEND_URL = "https://one-frontend.axu.dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -637,6 +340,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pinewood One";
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleTypeRole = Editor;\n    CFBundleURLName = \"pinewoodone-auth\";\n    CFBundleURLSchemes =     (\n        pinewoodone\n    );\n}";
+				INFOPLIST_KEY_PINEWOOD_BACKEND_URL = "https://one-backend.axu.dev";
+				INFOPLIST_KEY_PINEWOOD_CONVEX_URL = "https://grand-cod-855.convex.cloud";
+				INFOPLIST_KEY_PINEWOOD_FRONTEND_URL = "https://one-frontend.axu.dev";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -662,24 +369,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		663B39282ED43554009A9727 /* Build configuration list for PBXNativeTarget "Widget ServiceExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				663B39252ED43554009A9727 /* Debug */,
-				663B39262ED43554009A9727 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66796F0A2F4E770700C82585 /* Build configuration list for PBXNativeTarget "Pinewood" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66796F072F4E770700C82585 /* Debug */,
-				66796F082F4E770700C82585 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		66C6D9992E72883C0060E81D /* Build configuration list for PBXProject "Pinewood One" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -699,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66D1A0032FEBE0010060E81D /* XCRemoteSwiftPackageReference "convex-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/get-convex/convex-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66D1A0042FEBE0010060E81D /* ConvexMobile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66D1A0032FEBE0010060E81D /* XCRemoteSwiftPackageReference "convex-swift" */;
+			productName = ConvexMobile;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66C6D9962E72883C0060E81D /* Project object */;
 }
